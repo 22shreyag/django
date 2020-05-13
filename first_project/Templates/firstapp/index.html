@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>dingding</title>
+    <link rel="stylesheet" href="{% static "css/master.css" %}"/>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h2>Here are the records</h2>
+    <div class="djangotwo">
+      {% if Access _record %}
+      <table>
+        <thead>
+          <th>site name</th>
+          <th>data acessed</th>
+        </thead>
+
+       <tr>
+        <td>{{ acc.name}}</td>
+        <td>{{ acc.date}}</td>
+       </tr>
+       {% endfor %}
+      </table>
+      {% else %}
+         <p>No access </p>
+         {% endif %}
+    </div>
+  </body>
+</html>
